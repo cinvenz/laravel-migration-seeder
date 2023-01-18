@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Train;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Echo_;
 
 class HomeController extends Controller
 {

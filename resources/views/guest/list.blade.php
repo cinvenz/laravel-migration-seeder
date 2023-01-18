@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-    <h1 class="text-center">Tabella Treni in partenza</h1>
+    <h1 class="text-center mb-5">Tabella Treni in partenza</h1>
 
     <div class="name-colums">
         <div class="column">
@@ -64,10 +64,32 @@
                         <div class="train-grid"><p>{{$train->arrival_time}}</p></div>
                         <div class="train-grid"><p>{{$train->train_code}}</p></div>
                         <div class="train-grid"><p>{{$train->number_of_carriages}}</p></div>
-                        <div class="train-grid"><p>{{$train->in_time}}</p></div>
-                        <div class="train-grid"><p>{{$train->deleted}}</p></div>
+
+
+                        @if ($train->in_time === 0)
+                        <div class="train-grid"><p>In Ritardo</p></div>
+
+                        @else ($train->in_time === 1)
+                        <div class="train-grid"><p>In Orario</p></div>
+
+                        @endif
+
+                        @if ($train->deleted === 0)
+                        <div class="train-grid"><p>Attivo</p></div>
+
+                        @else ($train->deleted === 1)
+                        <div class="train-grid"><p>Cancellato</p></div>
+
+                        @endif
+
+
+
+
                 </div>
             </div>
+
+
+
         @endforeach
 
     </div>

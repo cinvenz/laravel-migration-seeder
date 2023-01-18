@@ -10832,6 +10832,7 @@ textarea.form-control-lg {
 
 .column {
   width: 15rem;
+  text-align: center;
 }
 
 .table {
