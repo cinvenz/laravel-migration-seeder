@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',      'HomeController@home')->name('home');
-Route::get('/list',  'HomeController@list')->name('list');
+Route::get('/',  'HomeController@list')->name('list');

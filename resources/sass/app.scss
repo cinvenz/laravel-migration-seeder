@@ -1,1 +1,32 @@
 @import "~bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.name-colums {
+    display: flex;
+    font-weight: bold;
+}
+
+.column {
+    width: 15rem;
+}
+
+.table-trains {
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.train {
+    display: flex;
+}
+
+.train-grid {
+    width: 15rem;
+    border: 1px solid red;
+}
